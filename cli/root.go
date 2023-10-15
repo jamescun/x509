@@ -8,6 +8,7 @@ import (
 
 	"github.com/jamescun/x509/cli/generate"
 	"github.com/jamescun/x509/cli/inspect"
+	"github.com/jamescun/x509/cli/sign"
 )
 
 var root = &cobra.Command{
@@ -18,6 +19,7 @@ var root = &cobra.Command{
 func init() {
 	root.AddCommand(generate.Root())
 	root.AddCommand(inspect.Root())
+	root.AddCommand(sign.Root())
 }
 
 // SetVersion overwrites the Version on the Root of the CLI with a subcommand
